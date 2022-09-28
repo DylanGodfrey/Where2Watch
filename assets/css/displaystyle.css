@@ -1,0 +1,24 @@
+body {
+  background: hsla(var(--igx-surface-500));
+  color: var(--igx-surface-500-contrast);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.igx-typography h1,
+.igx-typography h2,
+.igx-typography h3,
+.igx-typography h4,
+.igx-typography h5,
+.igx-typography h6,
+.igx-typography p,
+.igx-typography .igx-typography__body-1 {
+  margin: 0;
+}
+
+.outer-wrapper > *:not(router-outlet) {
+  width: 100%;
+}
