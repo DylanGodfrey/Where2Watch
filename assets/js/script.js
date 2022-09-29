@@ -21,7 +21,7 @@ function callIMDBApi (event) { //imdb API call with a user-inputted movie title 
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
-            console.log(data.results);
+            //console.log(data.results);
             
             // TODO: if "null"; this request will time out - create a function to resend request - or wait?
             // TODO: This only takes in the first results info (data.results[0]), change to store ALL data.results[x] - 
@@ -66,8 +66,8 @@ function callIMDBApi (event) { //imdb API call with a user-inputted movie title 
             
             //call the TMDB API with movieData as a parameter to connect between the TMDB API and IMDB API's
             //only uses movieData[0] at the moment (imdbMovieID) - use the others to populate displayPage.html 
-
-           // callTMDBApi(movieArray[event.target]); // call the API refering to the clicked on movie's ID
+            //movieArray[event.target]
+           callTMDBApi(imdbMovieIDs[0]); // call the API refering to the clicked on movie's ID
 
           });
         } else { // 'unable to find movie title'
@@ -80,7 +80,7 @@ function callIMDBApi (event) { //imdb API call with a user-inputted movie title 
 
 function callTMDBApi (movieData) { //GETs the movies tmdbID using the imdbMovieID from the previous API call - needed for the streaming info fetchURL
   //console.log("tmdb external source call");
-  tmdbExternalURL = `https://api.themoviedb.org/3/find/${movieData[0]}?api_key=${tmdbApiKey}&language=en-US&external_source=imdb_id`;
+  tmdbExternalURL = `https://api.themoviedb.org/3/find/${movieData}?api_key=${tmdbApiKey}&language=en-US&external_source=imdb_id`;
 
   let tmdbID;
   fetch(tmdbExternalURL) 
@@ -107,13 +107,13 @@ function callWatchProviderApi (tmdbID) { //GETs the service providers of the que
   .then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-      watchProvidersObjectList = data.results.CA.flatrate; // stores all streaming service info into array of objects
+      watchProvidersObjectList = data.results.US.flatrate; // stores all streaming service info into array of objects
       //console.log(watchProvidersObjectList);
       
       for (var i =0; i < watchProvidersObjectList.length; i++) {
         watchProvidersArray[i] = watchProvidersObjectList[i].provider_name; //isolates for and stores the name of the streaming services
       }
-    //console.log(watchProvidersArray);
+    console.log(watchProvidersArray);
      
     });
   } else {
