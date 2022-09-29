@@ -4,19 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{MOVIE TITLE}</title>
+    <title id="title">{MOVIE TITLE}</title>
     <link rel="stylesheet" href="./assets/css/displayStyle.css" />
   </head>
   <body>
-   <!-- <img src="/assets/" class="movie image" /> Create in the JS to pull from the API-->
-    <button id="Back"> 
-      <img src="./assets/images/back button.svg" /> 
-      BACK
+    <button id="Back"> <a href="./index.html">
+      <img src="./assets/images/back button.svg" />BACK</a>
     </button>
     <section class="movieCard">
-      <h1>{TITLE}</h1>
-      <h2 value="imdbRating">imdb Rating: {RATING}</h2>
-      <section>{POSTER}</section>
+      <h1 id="movieTitle">{TITLE}</h1>
+      <h2 id="imdbRating">imdb Rating: {RATING}</h2>
+      <figure id="moviePoster">{POSTER}</figure>
       <section class="description">
         <p id="moviePlot">{MOVIE PLOT}</p>
       </section>
@@ -32,6 +30,6 @@
         </button>
       </section>
     </section>
-    <script src="./assets/js/displaypage.js"></script>
+    <script src="./assets/js/displayPage.js"></script>
   </body>
 </html>
