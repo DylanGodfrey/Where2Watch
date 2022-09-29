@@ -4,38 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/displaystyle.css" />
+    <title>{MOVIE TITLE}</title>
+    <link rel="stylesheet" href="./assets/css/displayStyle.css" />
   </head>
   <body>
-    <img src="/assets/" class="movie image" />
-    <igx-input-group type="border" class="Movie Description">
-      <label igxLabel>Description</label>
-      <textarea value="RGBGRBRGWBBRGBQRBRGBRGBTTG" igxInput></textarea>
-    </igx-input-group>
-    <igx-navbar class="navbar">
-      <igx-navbar-action>
-        <button igxButton="icon" igxRipple>
-          <img src="./assets/images/back button.svg" />
+   <!-- <img src="/assets/" class="movie image" /> Create in the JS to pull from the API-->
+    <button id="Back"> 
+      <img src="./assets/images/back button.svg" /> 
+      BACK
+    </button>
+    <section class="movieCard">
+      <h1>{TITLE}</h1>
+      <h2 value="imdbRating">imdb Rating: {RATING}</h2>
+      <section>{POSTER}</section>
+      <section class="description">
+        <p id="moviePlot">{MOVIE PLOT}</p>
+      </section>
+      <section class="streamingServices">
+        <button disabled id="netflix">
+          <img src="./assets/images/netflix logo.svg" />
         </button>
-      </igx-navbar-action>
-      <ng-container></ng-container>
-      <igx-navbar-title>MOVIE FINDER</igx-navbar-title>
-    </igx-navbar>
-    <h5 class="h5">Movie title</h5>
-    <button igxButton="icon" igxRipple class="button">
-      <img src="./assets/images/netflix logo.svg" />
-    </button>
-    <button igxButton="icon" igxRipple class="primebutton">
-      <img src="./assets/images/primevideo icon.svg" />
-    </button>
-    <button igxButton="icon" igxRipple class="hulubutton">
-      <img src="./assets/images/hulu icon.svg" />
-    </button>
-    <igx-input-group type="border" class="igx-typography__body-1 textarea_1">
-      <label igxLabel>Description</label>
-      <textarea value="rating" igxInput></textarea>
-    </igx-input-group>
+        <button disabled id="prime">
+          <img src="./assets/images/primevideo icon.svg" />
+        </button>
+        <button disabled id="hulu">
+          <img src="./assets/images/hulu icon.svg" />
+        </button>
+      </section>
+    </section>
     <script src="./assets/js/displaypage.js"></script>
   </body>
 </html>
