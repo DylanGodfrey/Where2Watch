@@ -1,4 +1,4 @@
-const imdbApiKey = "k_s32r3njw"; // imdb API Key ** USE YOUR OWN KEY **
+const imdbApiKey = "k_r3l9iugp"; // imdb API Key ** USE YOUR OWN KEY **
 //  k_r3l9iugp
 // my maxxed out key: k_s32r3njw
 const tmdbApiKey = "544c4fb756174d83537dbb29a9037cd3"; // tmdb API Key ** USE YOUR OWN KEY **
