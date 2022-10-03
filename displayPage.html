@@ -8,28 +8,51 @@
     <link rel="stylesheet" href="./assets/css/displayStyle.css" />
   </head>
   <body>
-    <button id="Back"> <a href="./index.html">
-      <img src="./assets/images/back button.svg" />BACK</a>
+    <button id="Back" class="bg-yellow-500 p-5 m-5 rounded-lg inline-block sm:absolute"> 
+      <a href="./index.html">
+      <img src="./assets/images/back button.svg" /></a>
     </button>
-    <section class="movieCard">
-      <h1 id="movieTitle">{TITLE}</h1>
-      <h2 id="imdbRating">imdb Rating: {RATING}</h2>
-      <figure id="moviePoster">{POSTER}</figure>
-      <section class="description">
-        <p id="moviePlot">{MOVIE PLOT}</p>
-      </section>
-      <section class="streamingServices">
-        <button disabled id="netflix">
+
+    <div class="flex p-5">
+    <section class="movieCard bg-black text-white rounded-lg">
+
+      <figure class="md:w-1/3 md:float-left">
+        <img id="moviePoster" src="" alt="{POSTER}">
+        </figure>
+
+      <section id="cardHeader" class="md:w-2/3 md:float-right">
+        
+      <h1 id="movieTitle" class="float-left text-2xl md:text-[36px] inline-block m-5 p-5 uppercase">{TITLE}</h1>
+      <h2 id="imdbRating" class="inline-block  text-center text-2xl p-5 w-full md:float-right md:inline-block md:m-5 md:w-fit rounded-lg">imdb Rating: {RATING}</h2>
+    </section>
+    
+    <section class="description text-2xl inline-block text-center md:float-right md:w-2/3 xl:relative md:top-1/8 lg: top-[12%] xl:top-1/4 2xl: top-1/2">
+      <p id="moviePlot">{MOVIE PLOT}</p>
+    </section>
+
+    <section class="inline-block text-center sm:inline sm:relative sm:top-1/8 lg:top-1/4 xl:top-1/2">
+      <h2 class="text-2xl">Now Streaming On:</h2>
+        <section class="streamingServices">
+        <button disabled id="netflix" class="rounded-lg">
           <img src="./assets/images/netflix logo.svg" />
         </button>
-        <button disabled id="prime">
-          <img src="./assets/images/primevideo icon.svg" />
-        </button>
-        <button disabled id="hulu">
-          <img src="./assets/images/hulu icon.svg" />
-        </button>
-      </section>
+      <button disabled id="prime" class="rounded-lg">
+        <img src="./assets/images/primevideo icon.svg" />
+      </button>
+      <button disabled id="hulu" class="rounded-lg">
+        <img src="./assets/images/hulu icon.svg" />
+      </button>
+      <button disabled id="hbo" class="rounded-lg">
+        <img src="./assets/images/hbo icon.svg" />
+      </button>
     </section>
+    
+    </section>
+    </div>
     <script src="./assets/js/displayPage.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
   </body>
 </html>

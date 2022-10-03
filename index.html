@@ -6,26 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <title>Movie Finder</title>
+    <title>Where 2 Watch</title>
   </head>
-  <body>
-    <a href="displayPage.html"></a
-    ><!--Update this to add the query string to the URL and use that for the API calls on that page-->
-    <h1 class="text-3xl font-bold underline align:center">Movie Finder</h1>
-    <h2>Find out where your favorite movies are streaming!</h2>
-    <div class="search">
-      <form>
-        <input id="searchBar" type="text" placeholder="Search!" />
-        <button>
-          <img
-            src="./assets/images/search.svg"
-            alt="picture for the search button"
-            id="searchButton"
-          />
-        </button>
-      </form>
+  <body
+    class="min-w-400 h-screen flex-no-wrap sm:flex-wrap md:flex-wrap-reverse lg:flex-no-wrap xl:flex-wrap backdrop-blur-sm"
+    style="background-image: url('assets/images/best-posters-of-the-decade.jpeg');">
+    <div class="text-center h-full flex items-center flex-col justify-center max-w-auto mx-50 max-h-auto p-20 rounded border-0">
+      <div id="movie-finder-container" class="bg-black p-5 rounded border-1 min-w-full">
+        <h1 class="underline font-bold text-[48px] mb-2 text-white font-extrabold text-yellow-500">
+          Where2Watch
+        </h1>
+        <h2 class="text-white text-xl p-5">
+          Find out where your favorite movies are streaming!
+        </h2>
+        <div class="search">
+          <form>
+            <label
+              for="default-search"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+            <div class="relative">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg 
+                aria-hidden="true" 
+                class="w-5 h-5 text-gray-500 dark:text-gray-400" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24" 
+                xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+              <!-- CLOSER TO THIS: "inline-block p-4 pl-10 w-full text-center text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"-->
+              
+              <input
+                class="inline-block p-4 pl-10 w-full text-sm text-center text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                id="searchBar"
+                type="text"
+                placeholder="Search!"
+              />
+              <button 
+                id="searchButton"
+                class="w-[75px] h-[50px] absolute right-[4px] top-[2px] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-yellow-500 dark:hover:bg-yellow-700 dark:focus:ring-black"
+              >
+                <img src="./assets/images/search.svg" alt="picture for the search button" />
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="text-white text-xl p-5" id="searches">
+          RECENT SEARCHES
+          <ul id="list"><!--Will display previous searches here from localStorage --> </ul>
+        </div>
+      </div>
     </div>
     <script src="./assets/js/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </body>
 </html>
