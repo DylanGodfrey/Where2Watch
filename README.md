@@ -33,7 +33,10 @@ SO THAT I can get to watching my chosen movie as quickly as possible.
 # Links
 
 Github: https://github.com/DylanGodfrey/Where2Watch
+
 Deployed page: https://dylangodfrey.github.io/Where2Watch/
+
+Slideshow: https://docs.google.com/presentation/d/1rRsi75KrKl4kTL0gT9MrfbJpcsGeHW6afUDHbi1BUGQ/edit?usp=sharing
 
 ## Live view
 
