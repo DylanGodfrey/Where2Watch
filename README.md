@@ -38,6 +38,8 @@ Deployed page: https://dylangodfrey.github.io/Where2Watch/
 ## Live view
 
 live view of the main search page;
-./assets/images/searchpage.png
+![Screen Shot 2022-10-03 at 12 11 52 PM](https://user-images.githubusercontent.com/112361368/193618941-6fc40846-a879-4f4d-9df6-8710c846043d.png)
+
 live view of display page;
-./assets/images/displaypage.png
+<img width="1438" alt="Screen Shot 2022-10-03 at 12 54 41 PM" src="https://user-images.githubusercontent.com/112361368/193619058-3542a1d3-5c13-4b5b-8cfd-24f69413c8e6.png">
+
