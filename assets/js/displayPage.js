@@ -105,7 +105,7 @@ function callWatchProviderApi (tmdbID) { //GETs the service providers of the que
     if (response.ok) {
       response.json().then(function (data) {
       watchProvidersObjectList = data.results.US.flatrate; // stores all streaming service info into array of objects
-      console.log(watchProvidersObjectList);
+
       //Checks each supported watch provider and enables their button if the API says they support the movie
       for (var i =0; i < watchProvidersObjectList.length; i++) {
         if (watchProvidersObjectList[i].provider_name == "Netflix")
